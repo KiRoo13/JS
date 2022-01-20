@@ -1,65 +1,151 @@
-"use strict" // Включаю строгий режим
+"use strict" // Включаю строгий режи
+
+let one = document.getElementById('four');
+
+let two = document.getElementsByClassName("one");
+
+let three = document.querySelectorAll("div a");
+
+let four = document.querySelectorAll(".progress");
+
+let five = document.title
+
+let six = document.querySelector(".mt-0");
+
+let seven = document.querySelector('.test');
+
+let seven2 = document.createElement("p");
+    seven2.innerText = "hello world!"
+    seven.appendChild(seven2);
 
 
 
-product.prototype.discount = function (one) {      // Создаю метод discount для объектов  созданных, через конструктор product. 
-   let result = (one / 100) * 25;                  // Записываю метод в прототип конструктора product 
-   let result2 = one - result;
-   return result2;
-}
-
-function product (name, price) {        // Создаю коннструктор product на es5 синтаксисе, со значениями name и price
-       this.name = name;                // Записываю их в свойства объекта, с помощью this 
-       this.price = price;
-}
+let eight = document.querySelector(".btn-outline-warning ");
+let eight2 = document.querySelector(".btn-outline-dark ");
+let eight3 = document.getElementsByClassName("btn btn-outline-info")
 
 
-let product1 = new product ("Банан","150");    // Создаю объект product1, задаю значения в свойства name и price
-let product2 = new product ("Дыня","100");     // Создаю объект product2, задаю значения в свойства name и price
-
-console.log (product1, product2)
+eight.remove()
+eight2.remove()
 
 
+let nine = document.querySelector("ul");
+    nine.classList.add("one");
 
 
-class post {                                  // Создаю конструктор на es6 через ключевое слово slass
-   constructor (autor, text, data) {          // Зависываю в конструктор свойства
-      this.autor = autor;                     // Сохраняю их как свойства объктков, созданнх через конструктор post
-      this.text = text;
-      this.data = data;
-   }
-   edit (newText) {                              // Создаю метод edit, который автоматически записывается в прототип конструктора
-      if (typeof newText === "string") {         // Сделал простейшую проверку
-         this.text = newText
-      }
-      else if (typeof newText !== "string") {
-         console.log ("Это не строка")
-      }
-   }
-}
+let ten = document.querySelector(".nav-link");
+    ten.classList.toggle("active");
 
-let man = new post ("Kirill", "Hello", new Date ())
 
-console.log (man)
+let eleven = document.querySelector(".dropdown-menu");
+    eleven.classList.remove("dropdown-menu");
+
+
+let twelve = document.querySelector(".menu");
+    twelve.insertAdjacentHTML("beforeend","p");
+
+
+let thirteen = document.querySelector(".close");
+let result = thirteen.getAttribute("data-dismiss");
+let result2 = thirteen.getAttribute("aria-label");
 
 
 
-
-class AttachedPost extends post {                            // Создаю конструктор AttachedPost наслудую св-ва у post с помощью ключевого слова extend
-   constructor (autor, text, data) {                         // С помощью super записываю в свойства объектов, св-ва наследуемые из post
-       super (autor, text, data)                             // Добавляю доп св-во highlighted
-       this.highlighted = false;                             // Так же, с наследованием свойств из post, наследуется и метод edit
-   }
-   makeTextHighlighted () {                                  // Создаю метод makeTextHighlighted в прототип конструктора AttachedPost
-      this.highlighted = true;
-   }
-}
-
-let man2 = new AttachedPost ("Devid", "Good", new Date())
+let fourteen = document.querySelector("h1");
+    fourteen.setAttribute("data-one","один");
+    fourteen.setAttribute("data-two","два");
 
 
-console.log (man2)
+let fifteen = document.querySelector("#title")
+    fifteen.setAttribute("id","33")
 
-/* Тема с объектами и наследованием зашла вообще, хотя гоаорили сложно. А вот с методами массивов, не очень, все эти переборы
-   и обращение к кужным свойствам, не получаются, но думаю с опытом придет. Делал ДЗ, даже не знал, что есть видео с решением*/ 
+// document.addEventListener("DOMContentLoaded", function (event){
+//         alert ("Все теги загруженны");
+// });
 
+// window.addEventListener("load" , function (event) {
+//     alert ("Вся страница загруженна");
+// });
+
+
+let sixteen = document.querySelector(".btnn")
+    sixteen.addEventListener("click", function(event) {
+        alert ("Клик");
+    });
+
+
+let seventeen = document.querySelector("textarea")
+    seventeen.addEventListener("mouseover", function (event) {
+        console.log ("Навели на textarea");
+    });
+
+
+
+console.log(one);
+console.log(two);
+console.log(three);
+console.log(four);
+console.log(five);    
+console.log(six.parentNode);
+console.log(seven);
+console.log(eight3);
+console.log(nine);
+console.log(ten);
+console.log(eleven);
+console.log(twelve);
+console.log(result, result2);
+console.log(fourteen);
+console.log(fifteen);
+console.log(sixteen);
+console.log(seventeen);
+
+
+
+// ЗАДАНИЯ ВТОРОГО УРОВНЯ   ЗАДАНИЯ ВТОРОГО УРОВНЯ   ЗАДАНИЯ ВТОРОГО УРОВНЯ   ЗАДАНИЯ ВТОРОГО УРОВНЯ   ЗАДАНИЯ ВТОРОГО УРОВНЯ
+
+
+let img = document.querySelectorAll("img")  // вывожу картинки, которые уже есть на странице, не те что в примере
+
+for (let i = 0; i < img.length; i++) {
+    console.log(img[i]);
+};
+
+
+let teg = document.getElementsByClassName("one1");
+
+
+let title = document.getElementsByTagName("h2");
+for (let i = 0; i < title.length; i++) {
+    console.log(title[i].className);
+};
+
+
+let block = document.querySelector("section");
+let list = block.classList;
+
+   list.forEach(function (Element) {
+         console.log(Element);
+   });
+
+
+let check = document.querySelector(".product");
+let check2 = check.classList.contains("hidden");
+
+let card = document.querySelectorAll(".card3");
+let card2 = check.classList.contains("hidden");
+    // card.classList.remove("hidden")   Правильно написанно, но удалять не хочет 
+    
+
+let addet = document.querySelectorAll("b");
+//  addet.classList.toggle("sign");
+
+let btn = document.querySelectorAll("#one");
+
+
+
+
+
+
+console.log(check2);
+console.log(card2);
+console.log();
