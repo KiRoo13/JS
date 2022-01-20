@@ -1,174 +1,151 @@
-"use strict" // Включаю строгий режим
+"use strict" // Включаю строгий режи
 
+let one = document.getElementById('four');
 
-for (let i = 0; i <= 10; i++) {       // Создаю цикл, инициализирую его, задаю условия выхода из цикла 
-  if (i === 0) {
-     console.log (i + " Это ноль")    //  Задаю условия, для вывода в консоль информации о числах, в зависимосли от чился 
-  }
-  else if (i % 2) {
-   console.log (i + " Не четное")
-  }
-  else {console.log(i + " Четное")}
-}
+let two = document.getElementsByClassName("one");
 
+let three = document.querySelectorAll("div a");
 
+let four = document.querySelectorAll(".progress");
 
-const post = {
-   author: "John", //вывести этот текст
-   postId: 23,
-   comments: [
-   {
-   userId: 10,
-   userName: "Alex",
-   text: "lorem ipsum",
-   rating: {
-   likes: 10,
-   dislikes: 2 //вывести это число
-   }
-   },
-   {
-   userId: 5, //вывести это число
-   userName: "Jane",
-   text: "lorem ipsum 2", //вывести этот текст
-   rating: {
-   likes: 3,
-   dislikes: 1
-   }
-   },
-   ]
-   };
-   console.log(post.author);  // Получаю доступ к значению ключа author массива post
-   console.log(post.comments [0].rating.dislikes); // Получаю доступ к массиву post, далее к подмассиву comments по индексу [0] полусаем доступ к массиву с объектом rating и его свойству dislikes
-   console.log(post.comments [1].userId);    // Получаю доступ к массиву post, далее к подмассиву comments по индексу [1] полусаем доступ к еще одному подмассиву и выводим id с помощю ключа userId
-   console.log(post.comments [1].text);      // Получаю доступ к массиву post, далее к подмассиву comments по индексу [1] полусаем доступ к еще одному подмассиву и выводим текст с помощю ключа text
+let five = document.title
+
+let six = document.querySelector(".mt-0");
+
+let seven = document.querySelector('.test');
+
+let seven2 = document.createElement("p");
+    seven2.innerText = "hello world!"
+    seven.appendChild(seven2);
 
 
 
-   const products = [
-      {
-      id: 3,
-      price: 200,
-      },
-      {
-      id: 4,
-      price: 900,
-      },
-      {
-      id: 1,
-      price: 1000,
-      },
-      ];
-
-products[0].price = 170;   
-products[1].price = 765;
-products[2].price = 850;
-                              // Поменял знычения price с учетом скидки.  Не понял, как в методе forEach получить доступ к ключу price и с ним уже работать
-console.log (products[0]);
-console.log (products[1]);
-console.log (products[2]);
+let eight = document.querySelector(".btn-outline-warning ");
+let eight2 = document.querySelector(".btn-outline-dark ");
+let eight3 = document.getElementsByClassName("btn btn-outline-info")
 
 
-const products1 = [
-   {
-   id: 3,
-   price: 127,
-   photos: [
-   "1.jpg",
-   "2.jpg",
-   ]
-   },
-   {
-   id: 5,
-   price: 499,
-   photos: []
-   },
-   {
-   id: 10,
-   price: 26,
-   photos: [
-   "3.jpg"
-   ]
-},
-{
-id: 8,
-price: 78,
-},
-];
+eight.remove()
+eight2.remove()
 
 
-/*Создаю цикл, пробегаюсь по всему массиву  products1, нахожу все массивы с photos. 
-  Не получилось вывести массивы, которые содержат флото, пустой массив с фото тоже выводиться.
-  Подскажите, как решить, эту проблемму ? */
+let nine = document.querySelector("ul");
+    nine.classList.add("one");
 
 
-for (let index = 0; index < products1.length; index++) {  
-if (products1[index].photos) {
-      console.log (products1[index])
-   }
-}
+let ten = document.querySelector(".nav-link");
+    ten.classList.toggle("active");
 
-/* Не получилось через свойство sort отсортировать у массива, только значение price. Не понимаю, что нужно написать, что бы работать,
-   только с определенным свойством, как до него достучаться. Сортировался, весь массив, то есть обьъекты в нем, а не 1 свойство price */ 
+
+let eleven = document.querySelector(".dropdown-menu");
+    eleven.classList.remove("dropdown-menu");
+
+
+let twelve = document.querySelector(".menu");
+    twelve.insertAdjacentHTML("beforeend","p");
+
+
+let thirteen = document.querySelector(".close");
+let result = thirteen.getAttribute("data-dismiss");
+let result2 = thirteen.getAttribute("aria-label");
 
 
 
-   /* Создал новый массив res, через метод map вернул все значения price из массива products1, далее отсортировал эти значения,
-   через метод sort, для тренировки все таки, этого метода */
+let fourteen = document.querySelector("h1");
+    fourteen.setAttribute("data-one","один");
+    fourteen.setAttribute("data-two","два");
 
 
-let res = [] = products1.map(products1 => {return products1.price})  
+let fifteen = document.querySelector("#title")
+    fifteen.setAttribute("id","33")
+
+// document.addEventListener("DOMContentLoaded", function (event){
+//         alert ("Все теги загруженны");
+// });
+
+// window.addEventListener("load" , function (event) {
+//     alert ("Вся страница загруженна");
+// });
+
+
+let sixteen = document.querySelector(".btnn")
+    sixteen.addEventListener("click", function(event) {
+        alert ("Клик");
+    });
+
+
+let seventeen = document.querySelector("textarea")
+    seventeen.addEventListener("mouseover", function (event) {
+        console.log ("Навели на textarea");
+    });
+
+
+
+console.log(one);
+console.log(two);
+console.log(three);
+console.log(four);
+console.log(five);    
+console.log(six.parentNode);
+console.log(seven);
+console.log(eight3);
+console.log(nine);
+console.log(ten);
+console.log(eleven);
+console.log(twelve);
+console.log(result, result2);
+console.log(fourteen);
+console.log(fifteen);
+console.log(sixteen);
+console.log(seventeen);
+
+
+
+// ЗАДАНИЯ ВТОРОГО УРОВНЯ   ЗАДАНИЯ ВТОРОГО УРОВНЯ   ЗАДАНИЯ ВТОРОГО УРОВНЯ   ЗАДАНИЯ ВТОРОГО УРОВНЯ   ЗАДАНИЯ ВТОРОГО УРОВНЯ
+
+
+let img = document.querySelectorAll("img")  // вывожу картинки, которые уже есть на странице, не те что в примере
+
+for (let i = 0; i < img.length; i++) {
+    console.log(img[i]);
+};
+
+
+let teg = document.getElementsByClassName("one1");
+
+
+let title = document.getElementsByTagName("h2");
+for (let i = 0; i < title.length; i++) {
+    console.log(title[i].className);
+};
+
+
+let block = document.querySelector("section");
+let list = block.classList;
+
+   list.forEach(function (Element) {
+         console.log(Element);
+   });
+
+
+let check = document.querySelector(".product");
+let check2 = check.classList.contains("hidden");
+
+let card = document.querySelectorAll(".card3");
+let card2 = check.classList.contains("hidden");
+    // card.classList.remove("hidden")   Правильно написанно, но удалять не хочет 
+    
+
+let addet = document.querySelectorAll("b");
+//  addet.classList.toggle("sign");
+
+let btn = document.querySelectorAll("#one");
 
 
 
 
-res.sort(function(a, b){
-   if (a < b) {
-      return 1
-   }
-   if (a == b) {
-      return 0
-   }
-   if (a > b) {
-      return -1
-   }
-})
 
-console.log (res)
 
-/* Сделал приметивно, наверное не так нужно было сделать*/ 
-
-for (let i = 0; i < 10; i++) {
-  if (i == 0) {
-     console.log("X")
-  }
-    if (i == 1) {
-     console.log("XX")
-  }
-  if (i == 2) {
-   console.log("XXX")
-  }
-  if (i == 2) {
-   console.log("XXXX")
-  }
-  if (i == 4) {
-   console.log("XXXXX")
-  }
-  if (i == 5) {
-   console.log("XXXXXX")
-  }
-  if (i == 6) {
-   console.log("XXXXXXX")
-  }
-  if (i == 7) {
-   console.log("XXXXXXXX")
-  }
-  if (i == 8) {
-   console.log("XXXXXXXXX")
-  }
-  if (i == 9) {
-   console.log("XXXXXXXXXX")
-  }
-  if (i == 10) {
-   console.log("XXXXXXXXXXX")
-  }
-}
+console.log(check2);
+console.log(card2);
+console.log();
